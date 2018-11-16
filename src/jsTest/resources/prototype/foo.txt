@@ -1,0 +1,34 @@
+
+Release: Initial Commission Transmission [24.5]
+·         #33 Map CJ Commissions Data to Payback PurchaseEventRequest Fields [6.25]
+·         #31 Create PurchaseEventRequest From Available Queue Data [2.5]
+·         #34 Consumer Retrieves and Enqueues All Required Fields From API [5.25]
+·         #27 Consumer Automatically Retrieves Messages from Queue [5.25]
+·         #35 Producer Polls CJ API at Constant Interval [5.25]
+
+Refund/Correction Support
+·         #17 Consumer Sends Refund Event to Payback API
+
+Correctness [13 swag]
+·         #16 Re-enqueue purchase event on failure
+·         #18 Re-enqueue refund event on failure
+·         #11 Generate and Enqueue Unique Deduplication ID
+
+Operational Debt PayDown [13 swag]
+·         #15 Consumer Logging [Operational Visibility & Auditability]
+·         #13 Log Errors from CJ API
+·         #5 Healthcheck
+
+Deployment Automation [13 swag]
+·         #32 CloudFormation Templates
+
+Account Management Automation [21 swag]
+·         SPIKE: How does the format of the “commissions CSV” translate to the transactions API data?
+·         #6 Generate Commissions CSV
+
+Fancy Retry Stuff [34 swag]
+·         #12 Producer Retries Failed Commissions Queries at Increasing Intervals
+·         #4 Retry Mechanism w/ Exponential Backoff
+
+CD Pipeline Nice to Have [2 swag]
+·         #29 Alert Developers to Failing Build in Consumer and Producer

@@ -1,0 +1,32 @@
+body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas:
+            ". email            ."
+            ". display-name     ."
+            ". password         ."
+            ". confirm-password ."
+            ". register         ."
+            ". login            .";
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+    margin: 10px;
+}
+.email {
+    grid-area: email;
+}
+.display-name {
+    grid-area: display-name;
+}
+.password {
+    grid-area: password;
+}
+.confirm-password {
+    grid-area: confirm-password;
+}
+.register {
+    grid-area: register;
+}
+.login {
+    grid-area: login;
+}
