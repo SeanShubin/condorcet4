@@ -1,3 +1,22 @@
-a {
+
+a.side-track {
     font-size: 10px;
+}
+
+.centered-grid {
+    display: grid;
+    grid-template-areas: ". centered-grid-content .";
+    grid-template-columns: 1fr minmax(200px, auto) 1fr;
+}
+
+.single-column-grid {
+    grid-area: centered-grid-content;
+    display: grid;
+    grid-template-columns: auto;
+    grid-row-gap: 5px;
+    margin: 10px;
+}
+
+h1 {
+    margin: 10px;
 }
