@@ -3,6 +3,9 @@ plugins {
 }
 repositories {
     mavenCentral()
+    maven {
+        url "https://s3-us-west-2.amazonaws.com/dynamodb-local/release"
+    }
 }
 kotlin {
     targets {
@@ -24,6 +27,8 @@ kotlin {
         jvmMain {
             dependencies {
                 implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
+                implementation 'com.amazonaws:aws-java-sdk-dynamodb:1.11.452'
+                implementation 'com.amazonaws:DynamoDBLocal:1.11.119'
             }
         }
         jvmTest {
