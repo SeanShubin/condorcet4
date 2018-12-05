@@ -87,5 +87,84 @@
         </nav>
     </div>
 </div>
+
+<h1>Create Election</h1>
+<div class="flex-left">
+    <div class="grid-two-column">
+        <label>Created By</label>
+        <span>Alice</span>
+        <label>Created On</label>
+        <span>2018-07-01 15:10</span>
+        <label>Election Name</label>
+        <input placeholder="election name">
+        <label>Time Zone</label>
+        <select required>
+            <option disabled selected hidden>time zone</option>
+            <option>New York</option>
+            <option>London</option>
+            <option>Tokyo</option>
+        </select>
+        <label>Start</label>
+        <input type="datetime-local"
+               name="meeting-time"
+               value="2018-07-01T15:15">
+        <label>End</label>
+        <input type="datetime-local"
+               name="meeting-time"
+               value="2018-07-01T15:15">
+    </div>
+</div>
+<h2>Candidates</h2>
+<table>
+    <thead>
+    <tr>
+        <th>name</th>
+        <th>description</th>
+        <th>action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Chocolate</td>
+        <td>A usually sweet, brown food preparation of roasted and ground cacao seeds</td>
+    </tr>
+    <tr>
+        <td>Vanilla</td>
+        <td>A flavoring derived from orchids of the genus Vanilla, primarily from the Mexican species, flat-leaved
+            vanilla (V. planifolia)
+        </td>
+    </tr>
+    <tr>
+        <td>Strawberry</td>
+        <td>The garden strawberry is a widely grown hybrid species of the genus Fragaria, collectively known as the
+            strawberries.
+        </td>
+    </tr>
+    </tbody>
+</table>
+<h2>Eligible Voters</h2>
+<table>
+    <thead>
+    <tr>
+        <th>name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Alice</td>
+    </tr>
+    <tr>
+        <td>Bob</td>
+    </tr>
+    <tr>
+        <td>Carol</td>
+    </tr>
+    </tbody>
+</table>
+<button>Edit Eligible Voters</button>
+<nav>
+    <a href="">Home</a>
+    <a href="">Logout</a>
+</nav>
 </body>
 </html>
