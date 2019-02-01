@@ -1,8 +1,8 @@
 package com.seanshubin.condorcet.frontend.model
 
-import com.seanshubin.condorcet.persistence.Persistence
-import com.seanshubin.condorcet.frontend.model.Result.Companion.Success
 import com.seanshubin.condorcet.frontend.model.Result.Companion.Failure
+import com.seanshubin.condorcet.frontend.model.Result.Companion.Success
+import com.seanshubin.condorcet.persistence.Persistence
 
 class PersistingApi(val persistence: Persistence):Api{
     override fun register(email: Email, name: VoterName, password: Password): Result {
@@ -26,7 +26,7 @@ class PersistingApi(val persistence: Persistence):Api{
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun voters(): List<Voter> = persistence.listVoters()
+    override fun voters(): List<Voter> = TODO()
 
     private fun emailExists(email: Email): Boolean = persistence.voterEmailExists(email)
     private fun nameExists(name: VoterName): Boolean = persistence.voterNameExists(name)

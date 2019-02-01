@@ -119,52 +119,82 @@
     <thead>
     <tr>
         <th>name</th>
-        <th>description</th>
-        <th>action</th>
     </tr>
     </thead>
     <tbody>
     <tr>
         <td>Chocolate</td>
-        <td>A usually sweet, brown food preparation of roasted and ground cacao seeds</td>
     </tr>
     <tr>
         <td>Vanilla</td>
-        <td>A flavoring derived from orchids of the genus Vanilla, primarily from the Mexican species, flat-leaved
-            vanilla (V. planifolia)
-        </td>
     </tr>
     <tr>
         <td>Strawberry</td>
-        <td>The garden strawberry is a widely grown hybrid species of the genus Fragaria, collectively known as the
-            strawberries.
-        </td>
     </tr>
     </tbody>
 </table>
+<button>Edit Candidates</button>
 <h2>Eligible Voters</h2>
 <table>
     <thead>
     <tr>
+        <th>eligible</th>
         <th>name</th>
     </tr>
     </thead>
     <tbody>
     <tr>
+        <td><input type="checkbox"></td>
         <td>Alice</td>
     </tr>
     <tr>
+        <td><input type="checkbox"></td>
         <td>Bob</td>
     </tr>
     <tr>
+        <td><input type="checkbox"></td>
         <td>Carol</td>
     </tr>
     </tbody>
 </table>
-<button>Edit Eligible Voters</button>
 <nav>
     <a href="">Home</a>
     <a href="">Logout</a>
 </nav>
+<h1>Cast Ballot</h1>
+<h2>Election "Reduce tactical voting"</h2>
+<div class="flex-left">
+    <div class="grid-single-column">
+        <table>
+            <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Candidate</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><input type="number" min="1" max="3" step="1"></td>
+                <td>Preferred</td>
+            </tr>
+            <tr>
+                <td><input type="number" min="1" max="3" step="1"></td>
+                <td>Spoiler</td>
+            </tr>
+            <tr>
+                <td><input type="number" min="1" max="3" step="1"></td>
+                <td>Unpopular</td>
+            </tr>
+            </tbody>
+        </table>
+        <button>Apply Rankings</button>
+    </div>
+</div>
+
+<nav>
+    <a href="">Home</a>
+    <a href="">Logout</a>
+</nav>
+
 </body>
 </html>
