@@ -1,3 +1,5 @@
 package com.seanshubin.condorcet.reactive
 
-interface Effect
+interface Effect {
+    data class FireEvent(val event: Event) : Effect
+}
