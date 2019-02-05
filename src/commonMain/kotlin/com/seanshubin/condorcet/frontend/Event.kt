@@ -19,12 +19,8 @@ interface Event {
     data class CreateElectionRequest(val credentials: Credentials, val electionName: String) :
         Event
 
-    data class CreateElectionSuccess(val principal: String, val electionName: String) :
+    data class CreateElectionSuccess(val credentials: Credentials, val electionName: String) :
         Event
 
-    data class CreateElectionFailure(val reason: String) : Event
-    data class AddCandidateRequest(val credentials: Credentials, val electionName: String, val candidateName: String) :
-        Event
-
-    object AddCandidateSuccess : Event
+    data class CreateElectionFailure(val message: String) : Event
 }

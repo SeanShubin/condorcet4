@@ -12,6 +12,9 @@ object Reactor {
             is Event.Logout -> logout()
             is Event.NavigateToElection -> navigateToElection(page, event)
             is Event.NavigateToRegisterPage -> navigateToRegisterPage()
+            is Event.CreateElectionRequest -> createElectionRequest(page, event)
+            is Event.CreateElectionSuccess -> createElectionSuccess(event)
+            is Event.CreateElectionFailure -> createElectionFailure(page, event)
             else -> unsupportedEvent(event)
         }
     }
@@ -56,6 +59,20 @@ object Reactor {
     }
 
     private fun navigateToRegisterPage(): Result = Result(Page.Register(), emptyList())
+
+    private fun createElectionRequest(page: Page, event: Event.CreateElectionRequest): Result {
+        val effect = Effect.CreateElection(event.credentials, event.electionName)
+        return Result(page, listOf(effect))
+    }
+
+    private fun createElectionSuccess(event: Event.CreateElectionSuccess): Result {
+        return Result(Page.Election(credentials = event.credentials, electionName = event.electionName), emptyList())
+    }
+
+    private fun createElectionFailure(page: Page, event: Event.CreateElectionFailure): Result {
+        val newPage = page.createElectionFailure(event.message)
+        return Result(newPage, emptyList())
+    }
 
     private fun unsupportedEvent(event: Event): Result = throw RuntimeException("Unsupported event: $event")
 }
