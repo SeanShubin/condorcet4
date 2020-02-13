@@ -51,6 +51,7 @@
             <thead>
             <tr>
                 <th>name</th>
+                <th>creator</th>
                 <th>created</th>
                 <th>start</th>
                 <th>end</th>
@@ -59,18 +60,21 @@
             <tbody>
             <tr>
                 <td><a href="">Contrast first past the post</a></td>
+                <td>Alice</td>
                 <td>2018-01-01</td>
                 <td>2081-01-02</td>
                 <td>2081-01-06</td>
             </tr>
             <tr>
                 <td><a href="">Reduce tactical voting</a></td>
+                <td>Bob</td>
                 <td>2018-02-01</td>
                 <td>2018-02-02</td>
                 <td>2018-02-06</td>
             </tr>
             <tr>
                 <td><a href="">Contrast instant runoff</a></td>
+                <td>Carol</td>
                 <td>2018-03-01</td>
                 <td>2018-03-02</td>
                 <td>2018-03-06</td>
@@ -83,5 +87,114 @@
         </nav>
     </div>
 </div>
+
+<h1>Create Election</h1>
+<div class="flex-left">
+    <div class="grid-two-column">
+        <label>Created By</label>
+        <span>Alice</span>
+        <label>Created On</label>
+        <span>2018-07-01 15:10</span>
+        <label>Election Name</label>
+        <input placeholder="election name">
+        <label>Time Zone</label>
+        <select required>
+            <option disabled selected hidden>time zone</option>
+            <option>New York</option>
+            <option>London</option>
+            <option>Tokyo</option>
+        </select>
+        <label>Start</label>
+        <input type="datetime-local"
+               name="meeting-time"
+               value="2018-07-01T15:15">
+        <label>End</label>
+        <input type="datetime-local"
+               name="meeting-time"
+               value="2018-07-01T15:15">
+    </div>
+</div>
+<h2>Candidates</h2>
+<table>
+    <thead>
+    <tr>
+        <th>name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Chocolate</td>
+    </tr>
+    <tr>
+        <td>Vanilla</td>
+    </tr>
+    <tr>
+        <td>Strawberry</td>
+    </tr>
+    </tbody>
+</table>
+<button>Edit Candidates</button>
+<h2>Eligible Voters</h2>
+<table>
+    <thead>
+    <tr>
+        <th>eligible</th>
+        <th>name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>Alice</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>Bob</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>Carol</td>
+    </tr>
+    </tbody>
+</table>
+<nav>
+    <a href="">Home</a>
+    <a href="">Logout</a>
+</nav>
+<h1>Cast Ballot</h1>
+<h2>Election "Reduce tactical voting"</h2>
+<div class="flex-left">
+    <div class="grid-single-column">
+        <table>
+            <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Candidate</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><input type="number" min="1" max="3" step="1"></td>
+                <td>Preferred</td>
+            </tr>
+            <tr>
+                <td><input type="number" min="1" max="3" step="1"></td>
+                <td>Spoiler</td>
+            </tr>
+            <tr>
+                <td><input type="number" min="1" max="3" step="1"></td>
+                <td>Unpopular</td>
+            </tr>
+            </tbody>
+        </table>
+        <button>Apply Rankings</button>
+    </div>
+</div>
+
+<nav>
+    <a href="">Home</a>
+    <a href="">Logout</a>
+</nav>
+
 </body>
 </html>

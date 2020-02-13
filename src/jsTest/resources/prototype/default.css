@@ -40,6 +40,14 @@ nav a {
     margin: 5px;
 }
 
+.grid-two-column {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+    margin: 5px;
+}
+
 th {
     text-align: left;
 }
@@ -47,4 +55,12 @@ th {
 td, th {
     border: black solid 1px;
     padding: 5px;
+}
+
+table {
+    margin: 5px;
+}
+
+fieldset {
+    border: 1px solid black;
 }
